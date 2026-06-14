@@ -32,8 +32,8 @@ app.post("/meetup", async (req, res)=>{
         const saveMeet = await createmeetup(req.body)
         res.status(200).json({message: "Meetup added Successfully.", meet : saveMeet})
     }catch(error){
-        console.error("GET /meetup Error", error)
-        res.status(500).json({error: error.message})
+        console.error("Database Error", error)
+        res.status(500).json({error: "Failed to add data"})
     }
 })
 
