@@ -1,5 +1,5 @@
-const dns = require("dns")
-dns.setServers(["8.8.8.8", "8.8.4.4"])
+// const dns = require("dns")
+// dns.setServers(["8.8.8.8", "8.8.4.4"])
 
 
 const mongoose = require("mongoose")
@@ -14,5 +14,6 @@ const dataBase = async ()=>{
         console.log("Connected to Database Successfully.")
     }).catch((error)=> console.log("Error in connecting to Database."))
 }
+
 
 module.exports = {dataBase}
